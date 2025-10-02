@@ -96,6 +96,18 @@ app.post('/v1/chat/completions', async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.json({
+    service: 'OpenAI to NVIDIA NIM Proxy',
+    status: 'running',
+    endpoints: {
+      health: '/health',
+      models: '/v1/models',
+      chat: '/v1/chat/completions'
+    }
+  });
+});
+
 app.all('*', (req, res) => {
   res.status(404).json({
     error: {
