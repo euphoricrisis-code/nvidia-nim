@@ -52,7 +52,7 @@ app.post('/v1/chat/completions', async (req, res) => {
       model: nimModel,
       messages: messages,
       temperature: temperature || 0.7,
-      max_tokens: max_tokens || 2048,
+      max_tokens: max_tokens || 1024,
       stream: stream || false
     };
     
