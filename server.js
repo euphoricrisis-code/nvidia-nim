@@ -116,6 +116,14 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/debug/check-key', (req, res) => {
+  res.json({
+    hasKey: !!NIM_API_KEY,
+    keyPrefix: NIM_API_KEY ? NIM_API_KEY.substring(0, 10) + '...' : 'MISSING',
+    apiBase: NIM_API_BASE
+  });
+});
+
 app.all('*', (req, res) => {
   res.status(404).json({
     error: {
