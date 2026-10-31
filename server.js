@@ -20,7 +20,7 @@ const NIM_API_KEY = process.env.NIM_API_KEY;
 
 const MODEL_MAPPING = {
   'gpt-3.5-turbo': 'z-ai/glm-5.3-flash',
-  'gpt-4': 'moonshotai/kimi-k3',
+  'gpt-4': 'mistralai/mistral-large-4-1t-a52b',
   'gpt-4o': 'nvidia/nemotron-3.5-lightning-30b-a3b'
 };
 
